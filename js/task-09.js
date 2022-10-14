@@ -1,6 +1,7 @@
 const buttonRef = document.querySelector('.change-color');
 const buttonContainerRef = document.querySelector('.widget');
 const textContainerRef = document.querySelector('.color');
+const bodyRef = document.querySelector('body')
 
 buttonRef = addEventListener('click', backgroundColorChanger);
 
@@ -13,6 +14,6 @@ function getRandomHexColor() {
 function backgroundColorChanger() {
 
   
-  buttonContainerRef.style.backgroundColor = getRandomHexColor(); 
+  bodyRef.style.backgroundColor = getRandomHexColor(); 
   textContainerRef.textContent = buttonContainerRef.style.backgroundColor; 
 }

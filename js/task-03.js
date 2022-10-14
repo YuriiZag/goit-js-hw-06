@@ -17,14 +17,15 @@ const imageGalleryRef = document.querySelector('.gallery');
 
 
 
-const additionArray = [];
+const additionString = images.map(image => `<li><img src ='${image.url}' alt ='${image.alt}' width ='600'></img></li>`).join();
+console.log("additionString", additionString)
 
-for (const image of images) {
 
 
- imageGalleryRef.insertAdjacentHTML("beforeend", `<li><img src ='${image.url}' alt ='${image.alt}' width ='600'></img></li>` );
+
+imageGalleryRef.insertAdjacentHTML("beforeend", additionString);
   
 
-}
+
 
 
